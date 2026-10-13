@@ -1,0 +1,28 @@
+generated: '2026-10-13'
+method: searched
+source: https://libertai.io
+name: LibertAI API Plans
+sources:
+- https://libertai.io
+audience: developer-api
+pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-13'
+published: true
+note: Homepage lists per-model token prices (the GLM-5.3 flagship shown below) plus a flat-price subscription and pay-per-token credits; x402 per-request USDC payment on Base is also offered (docs.libertai.io/apis/x402.html). Per-model prices for the rest of the catalog are rendered client-side.
+plans:
+- name: Credits (pay per token)
+  description: No commitment, pay per million tokens; overflow past a subscription bills at the same per-token rate.
+  price_text: Pay per token
+  features:
+  - 'GLM-5.3 input: $1.40 per 1M tokens'
+  - 'GLM-5.3 output: $4.40 per 1M tokens'
+  - 256K context window (GLM-5.3)
+  limits: []
+- name: Subscribe
+  description: A flat monthly price for steady usage. Predictable bills, same private endpoint.
+  price_text: Fixed price
+  features: []
+  limits: []

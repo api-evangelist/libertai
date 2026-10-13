@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/libertai/main/json-schema/libertai-aleph-credits-request-schema.json",
+  "title": "AlephCreditsRequest",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/libertai-openapi.yml#/components/schemas/AlephCreditsRequest",
+  "properties": {
+    "address": {
+      "type": "string",
+      "title": "Address"
+    },
+    "amount": {
+      "type": "number",
+      "title": "Amount"
+    }
+  },
+  "type": "object",
+  "required": [
+    "address",
+    "amount"
+  ]
+}

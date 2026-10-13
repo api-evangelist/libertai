@@ -1,0 +1,6 @@
+generated: '2026-10-13'
+method: searched
+source: https://status.libertai.io/
+versioning: URL path prefix /v1 for the OpenAI-compatible surface (api.libertai.io/v1); OpenAPI info.version 0.1.0. No published versioning policy found.
+deprecation: No published deprecation policy found; no operations marked deprecated in the OpenAPI.
+status_page: https://status.libertai.io/

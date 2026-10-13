@@ -1,0 +1,55 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/libertai-openapi.yml
+vocabulary:
+  name: LibertAI Domain Vocabulary
+  description: 'Terms declared by LibertAI''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-13'
+  terms:
+  - term: AlephCreditsRequest
+    definition: 'Object declared by the contract with fields: address, amount.'
+    tags:
+    - Object
+    source: openapi/libertai-openapi.yml#/components/schemas/AlephCreditsRequest
+  - term: HTTPValidationError
+    definition: 'Object declared by the contract with fields: detail.'
+    tags:
+    - Object
+    source: openapi/libertai-openapi.yml#/components/schemas/HTTPValidationError
+  - term: ProxyRequest
+    definition: 'Object declared by the contract with fields: model.'
+    tags:
+    - Object
+    source: openapi/libertai-openapi.yml#/components/schemas/ProxyRequest
+  - term: ValidationError
+    definition: 'Object declared by the contract with fields: loc, msg, type.'
+    tags:
+    - Object
+    source: openapi/libertai-openapi.yml#/components/schemas/ValidationError
+  - term: Auth
+    definition: 'Resource group in the contract; its operation GET /libertai/auth/check: Check Auth'
+    tags:
+    - Resource Group
+    source: openapi/libertai-openapi.yml
+  - term: Models
+    definition: 'Resource group in the contract; its operation GET /libertai/models: Models List'
+    tags:
+    - Resource Group
+    source: openapi/libertai-openapi.yml
+  - term: Aleph Credits
+    definition: 'Resource group in the contract; its operation POST /libertai/aleph-credits: Purchase Aleph Credits'
+    tags:
+    - Resource Group
+    source: openapi/libertai-openapi.yml
+  - term: Search
+    definition: 'Resource group in the contract; its operation POST /search: Search'
+    tags:
+    - Resource Group
+    source: openapi/libertai-openapi.yml
+  - term: Proxy
+    definition: 'Resource group in the contract; its operation POST /{full_path}: Proxy Request'
+    tags:
+    - Resource Group
+    source: openapi/libertai-openapi.yml

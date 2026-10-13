@@ -1,0 +1,25 @@
+generated: '2026-10-13'
+method: derived
+source: openapi/libertai-openapi.yml
+status: candidate
+note: No official MCP server found (preflight mcp_hosts empty; docs llms.txt lists none). Candidate tools derived from OpenAPI operations.
+deployment:
+  mode: none
+  auth: api-key
+  verified: derived
+tools:
+- name: list_models
+  operationId: models_list_libertai_models_get
+  description: List LibertAI models.
+- name: openai_list_models
+  operationId: openai_models_list_v1_models_get
+  description: OpenAI-compatible model list.
+- name: search
+  operationId: search_search_post
+  description: Run a web search through the LibertAI Search API.
+- name: fetch
+  operationId: fetch_search_fetch_post
+  description: Fetch a page through the Search API.
+- name: check_auth
+  operationId: check_auth_libertai_auth_check_get
+  description: Check that the API key is valid.

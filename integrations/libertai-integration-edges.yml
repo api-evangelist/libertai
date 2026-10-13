@@ -1,0 +1,91 @@
+generated: '2026-10-13'
+method: searched
+source:
+- https://zapier.com/apps/libertai/integrations
+- https://n8n.io/integrations/libertai/
+- https://composio.dev/toolkits/libertai
+- https://monid.ai/tools/libertai
+checked:
+- https://composio.dev/toolkits/libertai
+- https://docs.libertai.io/integrations/
+- https://docs.libertai.io/llms.txt
+- https://libertai.io
+- https://monid.ai/tools/libertai
+- https://n8n.io/integrations/libertai/
+- https://zapier.com/apps/libertai/integrations
+summary: null
+marketplace_apps: []
+edges:
+- partner_name: Cline
+  partner: cline
+  type: claimed
+  evidence: https://docs.libertai.io/integrations/cline.html
+  direction: third-party
+  category: developer-tools
+  use_case: Use LibertAI as the OpenAI-compatible model backend
+  partner_match: name-exact
+- partner_name: Roo Code
+  partner: null
+  type: claimed
+  evidence: https://docs.libertai.io/integrations/roo-code.html
+  direction: third-party
+  category: developer-tools
+  use_case: Use LibertAI as the OpenAI-compatible model backend
+  partner_match: null
+- partner_name: Continue
+  partner: null
+  type: claimed
+  evidence: https://docs.libertai.io/integrations/continue.html
+  direction: third-party
+  category: developer-tools
+  use_case: Use LibertAI as the OpenAI-compatible model backend
+  partner_match: null
+- partner_name: OpenCode
+  partner: null
+  type: claimed
+  evidence: https://docs.libertai.io/integrations/opencode.html
+  direction: third-party
+  category: developer-tools
+  use_case: Use LibertAI as the OpenAI-compatible model backend
+  partner_match: null
+- partner_name: Aider
+  partner: aider
+  type: claimed
+  evidence: https://docs.libertai.io/integrations/aider.html
+  direction: third-party
+  category: developer-tools
+  use_case: Use LibertAI as the OpenAI-compatible model backend
+  partner_match: name-exact
+- partner_name: Claude Code
+  partner: null
+  type: claimed
+  evidence: https://docs.libertai.io/integrations/claude-code.html
+  direction: third-party
+  category: developer-tools
+  use_case: Use LibertAI as the OpenAI-compatible model backend
+  partner_match: null
+- partner_name: LangChain
+  partner: langchain
+  type: claimed
+  evidence: https://docs.libertai.io/integrations/langchain.html
+  direction: third-party
+  category: developer-tools
+  use_case: Use LibertAI as the OpenAI-compatible model backend
+  partner_match: name-exact
+- partner_name: LlamaIndex
+  partner: llamaindex
+  type: claimed
+  evidence: https://docs.libertai.io/integrations/langchain.html
+  direction: third-party
+  category: developer-tools
+  use_case: Use LibertAI as the OpenAI-compatible model backend
+  partner_match: name-exact
+- partner_name: Aleph Cloud
+  partner: null
+  type: claimed
+  evidence: https://libertai.io
+  direction: unknown
+  category: compute
+  use_case: Decentralized/confidential compute network LibertAI runs on ("Powered by Aleph Cloud")
+  partner_match: null
+templates: []

@@ -1,0 +1,220 @@
+openapi: 3.1.0
+info:
+  title: LibertAI API
+  version: 0.1.0
+paths:
+  /health:
+    get:
+      summary: Health
+      description: Health check that reports ready only after first full initialization
+        cycle.
+      operationId: health_health_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /libertai/auth/check:
+    get:
+      tags:
+      - Auth
+      summary: Check Auth
+      operationId: check_auth_libertai_auth_check_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /libertai/models:
+    get:
+      tags:
+      - Models
+      summary: Models List
+      operationId: models_list_libertai_models_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /v1/models:
+    get:
+      tags:
+      - Models
+      summary: Openai Models List
+      description: 'Returns a list of available models in OpenAI API format, enriched
+        with
+
+        context length, Hugging Face id and USD-per-token pricing when the model
+
+        is priced in the Aleph LTAI_PRICING aggregate.'
+      operationId: openai_models_list_v1_models_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /openrouter/models:
+    get:
+      tags:
+      - Models
+      summary: Openrouter Models List
+      description: 'Models listing in the schema OpenRouter requires from providers
+
+        (https://openrouter.ai/docs/guides/community/for-providers).
+
+        Only chat models priced in the Aleph aggregate are listed.'
+      operationId: openrouter_models_list_openrouter_models_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /libertai/aleph-credits:
+    post:
+      tags:
+      - Aleph Credits
+      summary: Purchase Aleph Credits
+      operationId: purchase_aleph_credits_libertai_aleph_credits_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlephCreditsRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /search:
+    post:
+      tags:
+      - Search
+      summary: Search
+      operationId: search_search_post
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /search/fetch:
+    post:
+      tags:
+      - Search
+      summary: Fetch
+      operationId: fetch_search_fetch_post
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /{full_path}:
+    post:
+      tags:
+      - Proxy
+      summary: Proxy Request
+      operationId: proxy_request__full_path__post
+      parameters:
+      - name: full_path
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Full Path
+      - name: preferred_instances
+        in: cookie
+        required: false
+        schema:
+          type: string
+          default: '{}'
+          title: Preferred Instances
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProxyRequest'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    AlephCreditsRequest:
+      properties:
+        address:
+          type: string
+          title: Address
+        amount:
+          type: number
+          title: Amount
+      type: object
+      required:
+      - address
+      - amount
+      title: AlephCreditsRequest
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    ProxyRequest:
+      properties:
+        model:
+          type: string
+          title: Model
+      additionalProperties: true
+      type: object
+      required:
+      - model
+      title: ProxyRequest
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+servers:
+- url: https://api.libertai.io
+  description: Production (per docs.libertai.io/llms.txt)

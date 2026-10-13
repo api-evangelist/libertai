@@ -1,0 +1,14 @@
+generated: '2026-10-13'
+method: searched
+source: https://docs.libertai.io/quickstart.html
+docs: https://docs.libertai.io/quickstart.html
+note: The served OpenAPI declares no securitySchemes; the docs document Bearer API keys created in the Developer console, and x402 per-request payment as a keyless alternative.
+schemes:
+- name: bearerApiKey
+  type: http
+  scheme: bearer
+  description: 'Authorization: Bearer $LIBERTAI_API_KEY; keys are created and topped up at https://console.libertai.io'
+- name: x402
+  type: payment
+  description: Keyless pay-per-request; the API answers 402 Payment Required, the client retries with an EIP-712-signed USDC (Base) payment in the X-PAYMENT header.
+  docs: https://docs.libertai.io/apis/x402.html

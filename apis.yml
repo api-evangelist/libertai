@@ -1,23 +1,115 @@
 aid: libertai
 name: LibertAI
-description: 'LibertAI is a company surfaced via the API Evangelist harvest backlog (source: market-gap:ai-model-routing)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'LibertAI provides private, TEE-attested AI inference on the decentralized
+  Aleph Cloud network through an OpenAI-compatible API at api.libertai.io: text (chat
+  completions), image, embeddings, audio and web search APIs over leading open models
+  such as GLM-5.3, with no KYC, no prompt logging, API keys from the developer console
+  or keyless pay-per-request x402 payments in USDC on Base, plus an agents framework.'
 url: https://raw.githubusercontent.com/api-evangelist/libertai/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:market-gap:ai-model-routing
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (local-v5; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-13'
 modified: '2026-10-13'
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- LLM Inference
+- Model Routing
+- OpenAI Compatible
+- Decentralized
+- Confidential Computing
+- x402
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+image: https://libertai.io/og.png
 common:
+- type: AgenticAccess
+  url: agentic-access/libertai-agentic-access.yml
+- type: Plans
+  url: plans/libertai-plans-pricing.yml
+- type: Spectral
+  url: rules/libertai-rules.yml
+- type: JSONLD
+  url: json-ld/libertai-context.jsonld
+- type: Vocabulary
+  url: vocabulary/libertai-vocabulary.yml
+- type: DataModel
+  url: data-model/libertai-data-model.yml
+- type: Authentication
+  url: authentication/libertai-authentication.yml
+- type: Lifecycle
+  url: lifecycle/libertai-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/libertai-problem-types.yml
+- type: Conformance
+  url: conformance/libertai-conformance.yml
+- type: LLMsTxt
+  url: llms/libertai-llms.txt
+- type: WellKnown
+  url: well-known/libertai-well-known.yml
+- type: Hosts
+  url: hosts/libertai-hosts.yml
+- type: IntegrationEdges
+  url: integrations/libertai-integration-edges.yml
+- type: SDKs
+  url: packages/libertai-packages.yml
+- type: Packages
+  url: packages/libertai-packages.yml
+- type: StatusPage
+  url: https://status.libertai.io/
+- type: DomainSecurity
+  url: security/libertai-domain-security.yml
 - type: Website
   url: https://libertai.io
+- type: Documentation
+  url: https://docs.libertai.io
+- type: GettingStarted
+  url: https://docs.libertai.io/quickstart.html
+- type: Blog
+  url: https://blog.libertai.io
+- type: GitHubOrganization
+  url: https://github.com/Libertai
+- type: Login
+  url: https://console.libertai.io/
+- type: Pricing
+  url: https://libertai.io/#pricing
+- type: Support
+  url: https://t.me/libertai
+- type: X
+  url: https://x.com/Libertai_DAI
+apis:
+- aid: libertai:libertai-api
+  name: LibertAI API
+  description: OpenAI-compatible inference API (chat completions, models, image, embeddings,
+    audio) plus Search and Fetch endpoints and Aleph credit purchase, served from
+    api.libertai.io; the published OpenAPI 3.1 documents 9 operations including a
+    catch-all POST proxy.
+  humanURL: https://docs.libertai.io/apis/
+  baseURL: https://api.libertai.io
+  tags:
+  - LLM Inference
+  - OpenAI Compatible
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/libertai-openapi.yml
+  - type: OpenAPI
+    name: OpenAPI (provider-hosted)
+    url: https://api.libertai.io/openapi.json
+  - type: Documentation
+    url: https://docs.libertai.io/apis/
+  - type: JSONSchema
+    url: json-schema/libertai-aleph-credits-request-schema.json
+  - type: JSONSchema
+    url: json-schema/libertai-proxy-request-schema.json
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 20
+  pass: local-v5

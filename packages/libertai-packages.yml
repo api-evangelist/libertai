@@ -1,0 +1,33 @@
+generated: '2026-10-13'
+method: searched
+source: https://docs.libertai.io/apis/x402.html
+packages:
+- name: '@libertai/x402'
+  registry: npm
+  url: https://www.npmjs.com/package/@libertai/x402
+  language: TypeScript
+  official: true
+  version: 0.1.0
+  published: '2026-03-06'
+  note: x402 payment wrapper for fetch/OpenAI SDK; repository github.com/LibertAI/libertai-agents (packages/x402)
+- name: libertai-x402
+  registry: pypi
+  url: https://pypi.org/project/libertai-x402/
+  language: Python
+  official: true
+  version: 0.1.0
+  published: '2026-03-17'
+- name: libertai-client
+  registry: pypi
+  url: https://pypi.org/project/libertai-client/
+  language: Python
+  official: true
+  version: 0.3.0
+  published: '2026-03-19'
+- name: libertai-agents
+  registry: pypi
+  url: https://pypi.org/project/libertai-agents/
+  language: Python
+  official: true
+  version: 0.2.0
+  published: '2025-07-26'
