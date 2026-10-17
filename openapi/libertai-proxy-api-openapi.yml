@@ -1,0 +1,94 @@
+openapi: 3.2.0
+info:
+  title: Libertai Proxy API
+  version: 0.1.0
+  description: 'Operations tagged Proxy across 2 of this provider''s published API definitions: libertai-openapi.json, libertai-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.libertai.io
+  description: Production (per docs.libertai.io/llms.txt)
+tags:
+- name: Proxy
+paths:
+  /{full_path}:
+    post:
+      tags:
+      - Proxy
+      summary: Proxy Request
+      operationId: proxy_request__full_path__post
+      parameters:
+      - name: full_path
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Full Path
+      - name: preferred_instances
+        in: cookie
+        required: false
+        schema:
+          type: string
+          default: '{}'
+          title: Preferred Instances
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProxyRequest'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+    ProxyRequest:
+      properties:
+        model:
+          type: string
+          title: Model
+      additionalProperties: true
+      type: object
+      required:
+      - model
+      title: ProxyRequest
+x-refined-from:
+- libertai-openapi.json
+- libertai-openapi.yml

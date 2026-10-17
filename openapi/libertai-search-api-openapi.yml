@@ -1,0 +1,38 @@
+openapi: 3.2.0
+info:
+  title: Libertai Search API
+  version: 0.1.0
+  description: 'Operations tagged Search across 2 of this provider''s published API definitions: libertai-openapi.json, libertai-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.libertai.io
+  description: Production (per docs.libertai.io/llms.txt)
+tags:
+- name: Search
+paths:
+  /search:
+    post:
+      tags:
+      - Search
+      summary: Search
+      operationId: search_search_post
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /search/fetch:
+    post:
+      tags:
+      - Search
+      summary: Fetch
+      operationId: fetch_search_fetch_post
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+x-refined-from:
+- libertai-openapi.json
+- libertai-openapi.yml

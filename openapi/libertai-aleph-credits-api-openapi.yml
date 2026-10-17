@@ -1,0 +1,83 @@
+openapi: 3.2.0
+info:
+  title: Libertai Aleph Credits API
+  version: 0.1.0
+  description: 'Operations tagged Aleph Credits across 2 of this provider''s published API definitions: libertai-openapi.json, libertai-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.libertai.io
+  description: Production (per docs.libertai.io/llms.txt)
+tags:
+- name: Aleph Credits
+paths:
+  /libertai/aleph-credits:
+    post:
+      tags:
+      - Aleph Credits
+      summary: Purchase Aleph Credits
+      operationId: purchase_aleph_credits_libertai_aleph_credits_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlephCreditsRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+    AlephCreditsRequest:
+      properties:
+        address:
+          type: string
+          title: Address
+        amount:
+          type: number
+          title: Amount
+      type: object
+      required:
+      - address
+      - amount
+      title: AlephCreditsRequest
+x-refined-from:
+- libertai-openapi.json
+- libertai-openapi.yml

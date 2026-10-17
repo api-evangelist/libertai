@@ -1,0 +1,47 @@
+{
+  "provider": "libertai",
+  "sources": [
+    "_original/libertai-openapi.json",
+    "libertai-openapi.yml"
+  ],
+  "outputs": [
+    "libertai-aleph-credits-api-openapi.yml",
+    "libertai-auth-api-openapi.yml",
+    "libertai-health-api-openapi.yml",
+    "libertai-models-api-openapi.yml",
+    "libertai-proxy-api-openapi.yml",
+    "libertai-search-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/libertai-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "libertai-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "libertai-openapi.json: tagged paths GET /health -> Health",
+    "libertai-openapi.json: declared missing tag: Aleph Credits",
+    "libertai-openapi.json: declared missing tag: Auth",
+    "libertai-openapi.json: declared missing tag: Health",
+    "libertai-openapi.json: declared missing tag: Models",
+    "libertai-openapi.json: declared missing tag: Proxy",
+    "libertai-openapi.json: declared missing tag: Search",
+    "libertai-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "libertai-openapi.yml: tagged paths GET /health -> Health",
+    "libertai-openapi.yml: declared missing tag: Aleph Credits",
+    "libertai-openapi.yml: declared missing tag: Auth",
+    "libertai-openapi.yml: declared missing tag: Health",
+    "libertai-openapi.yml: declared missing tag: Models",
+    "libertai-openapi.yml: declared missing tag: Proxy",
+    "libertai-openapi.yml: declared missing tag: Search",
+    "tag 'Aleph Credits' spans 2 source specs (libertai-openapi.json, libertai-openapi.yml): per-path servers applied",
+    "tag 'Auth' spans 2 source specs (libertai-openapi.json, libertai-openapi.yml): per-path servers applied",
+    "tag 'Health' spans 2 source specs (libertai-openapi.json, libertai-openapi.yml): per-path servers applied",
+    "tag 'Models' spans 2 source specs (libertai-openapi.json, libertai-openapi.yml): per-path servers applied",
+    "tag 'Proxy' spans 2 source specs (libertai-openapi.json, libertai-openapi.yml): per-path servers applied",
+    "tag 'Search' spans 2 source specs (libertai-openapi.json, libertai-openapi.yml): per-path servers applied",
+    "apis.yml register: written (+6 apis, 6 total)"
+  ],
+  "skipped": []
+}

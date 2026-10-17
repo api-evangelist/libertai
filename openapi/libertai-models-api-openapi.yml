@@ -1,0 +1,60 @@
+openapi: 3.2.0
+info:
+  title: Libertai Models API
+  version: 0.1.0
+  description: 'Operations tagged Models across 2 of this provider''s published API definitions: libertai-openapi.json, libertai-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.libertai.io
+  description: Production (per docs.libertai.io/llms.txt)
+tags:
+- name: Models
+paths:
+  /libertai/models:
+    get:
+      tags:
+      - Models
+      summary: Models List
+      operationId: models_list_libertai_models_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /v1/models:
+    get:
+      tags:
+      - Models
+      summary: Openai Models List
+      description: 'Returns a list of available models in OpenAI API format, enriched with
+
+        context length, Hugging Face id and USD-per-token pricing when the model
+
+        is priced in the Aleph LTAI_PRICING aggregate.'
+      operationId: openai_models_list_v1_models_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /openrouter/models:
+    get:
+      tags:
+      - Models
+      summary: Openrouter Models List
+      description: 'Models listing in the schema OpenRouter requires from providers
+
+        (https://openrouter.ai/docs/guides/community/for-providers).
+
+        Only chat models priced in the Aleph aggregate are listed.'
+      operationId: openrouter_models_list_openrouter_models_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+x-refined-from:
+- libertai-openapi.json
+- libertai-openapi.yml

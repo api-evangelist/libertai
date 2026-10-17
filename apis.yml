@@ -84,24 +84,96 @@ common:
 - type: X
   url: https://x.com/Libertai_DAI
 apis:
-- aid: libertai:libertai-api
-  name: LibertAI API
-  description: OpenAI-compatible inference API (chat completions, models, image, embeddings,
-    audio) plus Search and Fetch endpoints and Aleph credit purchase, served from
-    api.libertai.io; the published OpenAPI 3.1 documents 9 operations including a
-    catch-all POST proxy.
+- aid: libertai:libertai-aleph-credits-api
+  name: LibertAI Aleph Credits API
+  description: The Aleph Credits API from LibertAI — 1 operation(s) for aleph credits.
   humanURL: https://docs.libertai.io/apis/
   baseURL: https://api.libertai.io
   tags:
-  - LLM Inference
-  - OpenAI Compatible
+  - Aleph Credits
+  properties:
+  - type: OpenAPI
+    url: openapi/libertai-aleph-credits-api-openapi.yml
+  - type: Documentation
+    url: https://docs.libertai.io/apis/
+  - type: JSONSchema
+    url: json-schema/libertai-aleph-credits-request-schema.json
+  - type: JSONSchema
+    url: json-schema/libertai-proxy-request-schema.json
+- aid: libertai:libertai-auth-api
+  name: LibertAI Auth API
+  description: The Auth API from LibertAI — 1 operation(s) for auth.
+  humanURL: https://docs.libertai.io/apis/
+  baseURL: https://api.libertai.io
+  tags:
+  - Auth
+  properties:
+  - type: OpenAPI
+    url: openapi/libertai-auth-api-openapi.yml
+  - type: Documentation
+    url: https://docs.libertai.io/apis/
+  - type: JSONSchema
+    url: json-schema/libertai-aleph-credits-request-schema.json
+  - type: JSONSchema
+    url: json-schema/libertai-proxy-request-schema.json
+- aid: libertai:libertai-health-api
+  name: LibertAI Health API
+  description: The Health API from LibertAI — 1 operation(s) for health.
+  humanURL: https://docs.libertai.io/apis/
+  baseURL: https://api.libertai.io
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/libertai-health-api-openapi.yml
+  - type: Documentation
+    url: https://docs.libertai.io/apis/
+  - type: JSONSchema
+    url: json-schema/libertai-aleph-credits-request-schema.json
+  - type: JSONSchema
+    url: json-schema/libertai-proxy-request-schema.json
+- aid: libertai:libertai-models-api
+  name: LibertAI Models API
+  description: The Models API from LibertAI — 3 operation(s) for models.
+  humanURL: https://docs.libertai.io/apis/
+  baseURL: https://api.libertai.io
+  tags:
+  - Models
+  properties:
+  - type: OpenAPI
+    url: openapi/libertai-models-api-openapi.yml
+  - type: Documentation
+    url: https://docs.libertai.io/apis/
+  - type: JSONSchema
+    url: json-schema/libertai-aleph-credits-request-schema.json
+  - type: JSONSchema
+    url: json-schema/libertai-proxy-request-schema.json
+- aid: libertai:libertai-proxy-api
+  name: LibertAI Proxy API
+  description: The Proxy API from LibertAI — 1 operation(s) for proxy.
+  humanURL: https://docs.libertai.io/apis/
+  baseURL: https://api.libertai.io
+  tags:
+  - Proxy
+  properties:
+  - type: OpenAPI
+    url: openapi/libertai-proxy-api-openapi.yml
+  - type: Documentation
+    url: https://docs.libertai.io/apis/
+  - type: JSONSchema
+    url: json-schema/libertai-aleph-credits-request-schema.json
+  - type: JSONSchema
+    url: json-schema/libertai-proxy-request-schema.json
+- aid: libertai:libertai-search-api
+  name: LibertAI Search API
+  description: The Search API from LibertAI — 2 operation(s) for search.
+  humanURL: https://docs.libertai.io/apis/
+  baseURL: https://api.libertai.io
+  tags:
   - Search
   properties:
   - type: OpenAPI
-    url: openapi/libertai-openapi.yml
-  - type: OpenAPI
-    name: OpenAPI (provider-hosted)
-    url: https://api.libertai.io/openapi.json
+    url: openapi/libertai-search-api-openapi.yml
   - type: Documentation
     url: https://docs.libertai.io/apis/
   - type: JSONSchema
