@@ -16,6 +16,15 @@ modified: '2026-10-13'
 tags:
 - Company
 - Artificial Intelligence
+- Inference
+- Model Routing
+- OpenAI-Compatible
+- Decentralized
+- Confidential Computing
+- x402
+tags_raw:
+- Company
+- Artificial Intelligence
 - LLM Inference
 - Model Routing
 - OpenAI Compatible
@@ -106,6 +115,8 @@ apis:
   humanURL: https://docs.libertai.io/apis/
   baseURL: https://api.libertai.io
   tags:
+  - Authentication
+  tags_raw:
   - Auth
   properties:
   - type: OpenAPI
