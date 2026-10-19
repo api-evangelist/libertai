@@ -6,12 +6,19 @@ source:
 - https://composio.dev/toolkits/libertai
 - https://monid.ai/tools/libertai
 checked:
+- https://api.nuget.org/v3
 - https://composio.dev/toolkits/libertai
+- https://crates.io/api/v1
 - https://docs.libertai.io/integrations/
 - https://docs.libertai.io/llms.txt
 - https://libertai.io
 - https://monid.ai/tools/libertai
 - https://n8n.io/integrations/libertai/
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - https://zapier.com/apps/libertai/integrations
 summary: null
 marketplace_apps: []
@@ -88,4 +95,82 @@ edges:
   category: compute
   use_case: Decentralized/confidential compute network LibertAI runs on ("Powered by Aleph Cloud")
   partner_match: null
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/@libertai/x402
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@libertai/x402'
+      version: 0.1.0
+      released: '2026-03-06'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@libertai/x402
+      repo_leg: github-org:libertai
+      publisher_leg: org:libertai
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+- partner_name: PyPI
+  partner: pypi
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Python)
+  evidence: https://pypi.org/project/libertai-agents/
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: PyPI (public registry JSON)
+    spec_file: null
+    language: Python
+    packages:
+    - name: libertai-agents
+      version: 0.2.0
+      released: '2025-07-26'
+      released_field: upload_time
+      lapsed: false
+      page: https://pypi.org/project/libertai-agents/
+      repo_leg: github-org:libertai
+      publisher_leg: email:libertai.io
+      matched_by: domain
+    - name: libertai-client
+      version: 0.3.0
+      released: '2026-03-19'
+      released_field: upload_time
+      lapsed: false
+      page: https://pypi.org/project/libertai-client/
+      repo_leg: domain:libertai.io
+      publisher_leg: email:libertai.io
+      matched_by: domain
+    - name: libertai-x402
+      version: 0.1.0
+      released: '2026-03-17'
+      released_field: upload_time
+      lapsed: false
+      page: https://pypi.org/project/libertai-x402/
+      repo_leg: domain:libertai.io
+      publisher_leg: email:libertai.io
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 templates: []
