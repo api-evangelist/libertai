@@ -1,0 +1,14 @@
+{
+  "repo": "libertai",
+  "feeds": [
+    {
+      "source": "https://blog.libertai.io",
+      "feed_url": "https://blog.libertai.io",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-10-17T14:53:57Z"
+}
